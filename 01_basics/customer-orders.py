@@ -3,7 +3,7 @@ from pyspark import SparkConf, SparkContext
 conf = SparkConf().setMaster('local').setAppName('CustomerOrders')
 sc = SparkContext(conf=conf)
 
-file = sc.textFile('customer-orders.csv')
+file = sc.textFile('../data/customer-orders.csv')
 
 def parse_orders(line):
     content = line.split(',')
